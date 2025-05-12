@@ -1,0 +1,26 @@
+
+-- Employees with age more than 30
+select * from Employees where age > 30;
+
+select * from Employees where age > 30 and department = 'sales';
+
+select * from Employees where age >= 30 and age <= 40;
+select * from Employees where age between 30 and 40;
+
+ select * from Employees where department = 'Marketing' or department = 'Sales';
+ 
+ select * from Employees where name like 'Jo%';
+ 
+ select * from Employees where department is not null;
+ 
+ -- Getting only not null data throught the table
+ select * from Employees where department is not null and age is not null;
+ 
+ -- Getting data using IN command
+ select * from Employees where department in ('Sales','Marketing');
+
+-- Getting data using NOT IN command 
+ select * from Employees where department not in ('Sales','Marketing');
+ 
+ -- Marketing or Sales people witha ge more than 30
+ select * from Employees where (department in ('Sales','Marketing')) and age > 30;
